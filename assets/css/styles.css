@@ -1,0 +1,580 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f1b4c;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif; /* -> remember to add this backup option */
+}
+
+/* ==================== Header ==================== */
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 98px;
+    padding: 18.5px 24px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==================== Header ==================== */
+
+.header {
+    position: relative;
+    background-color: #e6f0ff;
+    height: 100vh;
+}
+
+/* ==================== Navbar ==================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 38px; /* should set padding only for top in this example */
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar ul a {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4f5361;
+    padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.navbar .action-link {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.navbar .action-btn {
+    margin-left: 18px;
+    padding: 13px 16px; /* should not have line-height properties, if have, hard to set height=40px */
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-radius: 8px;
+}
+
+/* ==================== Hero ==================== */
+
+.hero {
+    margin-top: 130px; /* 130px not 138px, should you the lowest component to check the margin */
+}
+
+.hero .info {
+    width: 51%;
+}
+
+.hero .sub-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #687691;
+}
+
+.hero .title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 1.19;
+    color: #000336;
+}
+
+.hero .desc {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.78; /* should use 1.78 = 32/18, should not use 32px */
+    color: #5a6473;
+}
+
+.hero .hero-cta {
+    min-width: 170px;
+    margin-top: 40px;
+}
+
+.hero-img {
+    position: absolute;
+    bottom: 0;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    width: 584px;
+    height: 619px;
+}
+
+/* ==================== Clients ==================== */
+
+.clients {
+    margin-top: 79px; /* should bring the margin-top to the parents element */
+    padding: 43px 0px 64px;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients .row-desc {
+    margin-top: 23px;
+}
+
+.clients .row-desc .desc {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: #7d8589;
+}
+
+.clients .brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 96.5px;
+}
+
+/* ==================== Guides ==================== */
+
+.guides {
+    display: flex;
+    margin-top: 40px;
+    padding: 93px 0px 79px;
+    text-align: center;
+}
+
+/* ==================== Guides Intro ==================== */
+
+.guides .intro {
+    width: 459px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guides .intro .sub-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #000339;
+}
+
+.guides .intro .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.guides .intro .desc {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+/* ==================== Guides List ==================== */
+
+.guides .list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.guides .guide-item {
+    padding: 0 70px;
+}
+
+.guides .guide-item .title {
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    color: #3b3c45;
+}
+
+.guides .guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0689ff;
+}
+
+.guides .guide-item .arrow {
+    margin-left: 6px;
+}
+
+.guides .guide-cta {
+    margin-top: 50px;
+}
+
+.guides .guide-cta .btn {
+    min-width: 170px;
+}
+
+/* ==================== Featured ==================== */
+.featured {
+    padding: 110px 0px;
+    margin-top: 41px;
+    background: #f5fafe;
+}
+
+.featured header .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #000339;
+}
+
+.featured header .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.featured header .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+.featured header .link {
+    display: flex;
+    align-items: center;
+}
+
+.featured header span {
+    margin-right: 8px; /* after use display=flex & align-items=center at parent element -> elements are very close */
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #0689ff;
+}
+
+.featured .featured-list {
+    display: flex;
+    margin-top: 68px;
+    gap: 30px;
+}
+
+.featured .featured-item {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.featured .featured-item .thumb {
+    width: 100%; /* add width=100% so that at parent element could use flex=1 */
+    height: 227px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.featured .featured-item .thumb-desc {
+    margin: 17px 38px 22px 20px;
+}
+
+.featured .thumb-desc .sub-title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.5; /* use line-height=1.5 with English */
+    color: #000339;
+}
+
+.featured .thumb-desc .desc {
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #a3a6ab;
+    --line-clamp: 3;
+    word-break: break-all;
+}
+
+.featured .thumb-desc .icon-list {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+}
+
+.featured .thumb-desc .icon {
+    display: flex;
+    align-items: center;
+}
+
+.featured .thumb-desc .icon span {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: #4d4d52;
+}
+
+/* ==================== Stats ==================== */
+.stats {
+    margin-top: 75px;
+    padding: 50px 0 50px;
+}
+
+.stats .content {
+    width: 1017px;
+    max-width: calc(100% - 48px);
+    margin-left: 196px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+/* ==================== Stats Img Block ==================== */
+.stats .img-block {
+    position: relative;
+    width: 51%;
+}
+
+.stats .img-block .img-stats {
+    display: block;
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    margin-left: auto;
+    border-radius: 12px;
+}
+
+.stats .img-block .stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 45px 22px 41px;
+}
+
+.stats .img-block .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .img-block .row .value {
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: #000339;
+}
+
+.stats .img-block .trend-block .trend-desc {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #a7a7a7;
+}
+
+.stats .img-block .stats-trend .separate {
+    margin-top: 26px;
+    /* no need to put width here */
+    height: 1.2px;
+    background: #e9e9e9;
+}
+
+/* ==================== Stats User Collection ==================== */
+.stats .img-block .user-collection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 26px;
+    margin-left: 3px;
+    gap: 16px 14px; /* row gap: gap between rows,,, column gap: gap between column */
+}
+
+.stats .img-block .user-group {
+    display: flex;
+}
+
+.stats .img-block .user-collection .avatar {
+    width: 16px;
+    height: 16px;
+    margin-left: -3px;
+    object-fit: cover; /* should add object-fit=cover for avatar */
+    border-radius: 50%;
+    background-color: var(--bg-color, black);
+    font-weight: 450;
+    font-size: 0.7rem;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+/* ==================== Stats Info ==================== */
+.stats .info {
+    /* remember to check carefully the selector, if wrong, not thing work */
+    width: 49%;
+    padding-left: 165px;
+}
+
+.stats .info .sub-title {
+    position: relative;
+    margin-top: 79px;
+    margin-right: 63px;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.29;
+    color: #000339;
+}
+
+.stats .info .sub-title:before {
+    /* remember to add the content */
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.stats .info .desc {
+    margin-top: 20px;
+    margin-right: 23px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+/* ==================== Stats Quantity ==================== */
+.stats .qty-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+    margin-left: 32px;
+}
+
+.stats .qty-list .number {
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 1;
+    color: #000000;
+}
+
+.stats .qty-list .desc {
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #7b8087;
+}
+
+/* ==================== Subscription ==================== */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    display: flex;
+    position: relative;
+    background: #063183;
+    border-radius: 20px;
+    height: 370px;
+}
+
+.subscription .info {
+    padding: 110px 80px 0px;
+}
+
+.subscription .info .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #ffffff;
+    word-break: break-all;
+    width: 501px;
+    max-width: 100%;
+}
+
+.subscription .info .desc {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #ffffff;
+    opacity: 0.75;
+    width: 501px;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.subscription .info .btn {
+    margin-top: 20px;
+    width: 151px;
+    background: #ffffff;
+    border-radius: 12px;
+    color: #002366;
+}
+
+.subscription .body .image {
+    position: absolute;
+    bottom: 0;
+    left: 670px;
+}
